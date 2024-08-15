@@ -61,8 +61,7 @@ class _GenerateQRPageState extends State<GenerateQRPage> {
                     Padding(
                       padding: const EdgeInsets.only(left: 22),
                       child: SizedBox(
-                        width: (50 + 2) * PdfPageFormat.mm,
-
+                        width: (48 + 2) * PdfPageFormat.mm,
                         // width: (76.2 + 2) * PdfPageFormat.mm,
                         height: 12,
                         child: SliderTheme(
@@ -74,7 +73,7 @@ class _GenerateQRPageState extends State<GenerateQRPage> {
                           child: Slider(
                             min: 0.0,
                             // max: 76.2 - 20,
-                            max: 50 - 20,
+                            max: 48 - 10,
                             value: logic.xValue,
                             onChanged: (value) {
                               setState(() {
@@ -92,8 +91,8 @@ class _GenerateQRPageState extends State<GenerateQRPage> {
                           Container(
                             // height: 50 * PdfPageFormat.mm,
                             // width: 76.2 * PdfPageFormat.mm,
-                            height: 60 * PdfPageFormat.mm,
-                            width: 50 * PdfPageFormat.mm,
+                            height: 71 * PdfPageFormat.mm,
+                            width: 48 * PdfPageFormat.mm,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black),
 
@@ -164,7 +163,7 @@ class _GenerateQRPageState extends State<GenerateQRPage> {
                                   ),
                                   child: Slider(
                                     min: 0.0,
-                                    max: 76.2 - 20,
+                                    max: 71 - 20,
                                     value: logic.yValue,
                                     onChanged: (value) {
                                       setState(() {

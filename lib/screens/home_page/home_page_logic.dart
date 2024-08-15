@@ -345,7 +345,7 @@ class HomePageLogic extends GetxController {
         // pageFormat:
         // const PdfPageFormat(76.2 * PdfPageFormat.mm, 50 * PdfPageFormat.mm),
         pageFormat:
-            const PdfPageFormat(50 * PdfPageFormat.mm, 60 * PdfPageFormat.mm),
+            const PdfPageFormat(48 * PdfPageFormat.mm, 71 * PdfPageFormat.mm),
         build: (pw.Context context) {
           return pw.Stack(children: [
           //   pw.Positioned(
@@ -401,10 +401,19 @@ class HomePageLogic extends GetxController {
 
   Future<void> printPdf() async {
     final doc = pw.Document();
+    var a  = await Printing.listPrinters();
+
+  
     await createPdf(doc);
-    await Printing.layoutPdf(
-      outputType: OutputType.photo,
-        onLayout: (PdfPageFormat format) async => doc.save());
+
+    // await Printing.layoutPdf(
+    //   usePrinterSettings: true,
+    //   forceCustomPrintPaper: true,
+    //     onLayout: (PdfPageFormat format) async => doc.save());
+    await Printing.directPrintPdf(
+      usePrinterSettings: false,
+      forceCustomPrintPaper: true,
+        onLayout: (PdfPageFormat format) async => doc.save(), printer: a.first);
   }
 
   Future<void> getAllQrList() async {
