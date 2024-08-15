@@ -1,0 +1,9 @@
+// const apiBaseUrl = 'https://97c8-103-156-27-94.ngrok-free.app/';
+// const apiBaseUrl = 'http://192.168.100.36:8000';
+const apiBaseUrl = 'http://ec2-65-0-74-222.ap-south-1.compute.amazonaws.com:8000';
+// const imageBaseUrl = 'https://api.ebibahabibaha.pwnbot.io';
+const webSocketUrl = 'ws://ec2-65-0-74-222.ap-south-1.compute.amazonaws.com:8000/ws/';
+// const webSocketUrl = 'ws://97c8-103-156-27-94.ngrok-free.app/ws/';
+// const webSocketUrl = 'ws://192.168.100.36:8000/ws/';
+const authType = 'JWT';
+// const authType = 'Bearer';
